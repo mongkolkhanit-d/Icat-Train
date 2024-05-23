@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./calculator.css"/>
+</head>
+
+<body style="background-color: rgb(255, 208, 137);">
+    <div class="Titlename">
+        <h1 class="name">CALCULATOR</h1>
+    </div>
+
+    <div class="calculator">
+        <div class="output">
+            <p id="formula"></p>
+            <p id="result"></p>
+        </div>
+        <div class="keys">
+            <button value="+" onclick="onOparatorButtonClick(value)" class="key key_operator">+</button>
+            <button value="-" onclick="onOparatorButtonClick(value)" class="key key_operator">-</button>
+            <button value="*" onclick="onOparatorButtonClick(value)" class="key key_operator">*</button>
+            <button value="/" onclick="onOparatorButtonClick(value)" class="key key_operator">/</button>
+            <button value="7" onclick="onNumberButtonClick(value)" class="key">7</button>
+            <button value="8" onclick="onNumberButtonClick(value)" class="key">8</button>
+            <button value="9" onclick="onNumberButtonClick(value)" class="key">9</button>
+            <button value="4" onclick="onNumberButtonClick(value)" class="key">4</button>
+            <button value="5" onclick="onNumberButtonClick(value)" class="key">5</button>
+            <button value="6" onclick="onNumberButtonClick(value)" class="key">6</button>
+            <button value="1" onclick="onNumberButtonClick(value)" class="key">1</button>
+            <button value="2" onclick="onNumberButtonClick(value)" class="key">2</button>
+            <button value="3" onclick="onNumberButtonClick(value)" class="key">3</button>
+            <button onclick="onClearButtonClick()" class="key">AC</button>
+            <button value="0" onclick="onNumberButtonClick(value)" class="key">0</button>
+            <button class="key"></button>
+            <button onclick="onSummitClick()" class="key key_enter">=</button>
+        </div>
+    </div>
+
+    <script src="./calculator.js"></script>
+</body>
+</html>

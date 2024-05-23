@@ -1,0 +1,82 @@
+.Titlename:hover{
+    color: rgb(167, 98, 30);
+}
+
+.Titlename{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: wheat;
+    margin-top: -10rem; 
+}
+
+.name{
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+    text-align: center;
+}
+
+body{
+    height: 100vh;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 0;
+}
+.calculator{
+    max-inline-size: 22rem;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.15), 0px 2px 4px 0px rgba(0, 0, 0, 0.12);
+    margin-top: -20rem; 
+}
+
+.output{
+    font-size: 3rem;
+    text-align: end;
+
+    background: hsl(35, 74%, 37%);
+    color: hsl(255, 100%, 100%);
+    padding-block-start: 0.5rem;
+    padding-block-end: 0.5rem;
+    padding-inline-end: 1rem;
+}
+
+.keys{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 1px;
+    background: hsl(208, 24%, 74%);
+}
+
+.key{
+    padding-block-start: 1rem;
+    padding-block-end: 0.5rem;
+    padding-inline-start: 1.25rem;
+    padding-inline-end: 1.25rem;
+    font-size: 1.5rem;
+}
+
+.key_enter{
+    grid-column: 4 / 5; 
+    grid-row: 2 / span 4;
+}
+
+#formula{
+    margin: 0;
+    width: 100%;
+    font-size: 3rem;
+    word-wrap: break-word;
+
+    min-height: 55px;
+}
+
+#result{
+    margin: 0;
+    width: 100%;
+    font-size: 4rem;
+    font-weight: 900;
+    word-wrap: break-word;
+
+    min-height: 74px;
+}

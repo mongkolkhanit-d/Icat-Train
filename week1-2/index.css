@@ -1,0 +1,47 @@
+div>p{
+    color: coral;
+}
+.text:hover{
+    color: blueviolet;
+}
+
+.Bigbox{
+    background-color: blanchedalmond;
+    padding-top: 20px;
+
+    width: 50%;
+    max-width: 250px;
+}
+
+.box{
+    background-color: brown;
+    width: 50px;
+}
+
+.grid-container{
+    margin: 20px;
+    background-color: bisque;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 10px;
+}
+
+.grid-item{
+    padding: 10px;
+    background-color: beige;
+}
+
+.flex-container{
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    background-color: cornsilk;
+}
+
+.flex-item{
+    width: 250px;
+    background-color: rgb(153, 60, 60);
+}
