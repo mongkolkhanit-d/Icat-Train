@@ -31,29 +31,51 @@
 
 import axios from "axios"
 
+interface Hobby {
+    hobbyName: string;
+    rate: number;
+}
+
 interface DetailData{
-    username:string
+    name:string
     age:number
-    hobby:string
+    hobbie: Hobby[];
 }
 
 const dataApi = async(): Promise<DetailData[]> => {
     try{
-        const {data} = await axios.get('https://icat-trainee-api.onrender.com/getData');
-        return data.data;
+        const rawdata = await axios.get('https://icat-trainee-api.onrender.com/getData');
+        const mediumdata = rawdata.data.data.data;
+        // console.log(mediumdata);
+        return mediumdata;
     }catch (error) {
         console.error('Error',error);
         throw error;
      }
 }
 
+function mostlikehobby(hobbyName: Hobby[]) {
+    return hobbyName.reduce((most, hobby) => hobby.rate > most.rate ? hobby : most);
+}
+
+
 const output = async () => {
     try {
         const data = await dataApi();
-        console.log(data);
+        const outputData = data.map((detail:DetailData) => {
+            const mostLikeHobbie = mostlikehobby(detail.hobbie)
+            
+            return {
+                name: detail.name,
+                age: detail.age,
+                hobbie: mostLikeHobbie.hobbyName
+            }
+        })
+        console.log(outputData);
     } catch (error) {
         console.error('Error:', error);
     }
+    
 }
 
 output();

@@ -50,10 +50,17 @@ const dataApi = () => __awaiter(void 0, void 0, void 0, function* () {
         throw error;
     }
 });
+const findHighestRateHobby = (hobbies) => {
+    const highestRateHobby = hobbies.reduce((prev, current) => (prev.rate > current.rate) ? prev : current);
+    return highestRateHobby.hobbyName;
+};
 const output = () => __awaiter(void 0, void 0, void 0, function* () {
     try {
         const data = yield dataApi();
-        console.log(data);
+        data.forEach((item) => {
+            const highestRateHobby = findHighestRateHobby(item.hobbie);
+            console.log(`Username: ${item.username}, Age: ${item.age}, Highest Rate Hobby: ${highestRateHobby}`);
+        });
     }
     catch (error) {
         console.error('Error:', error);
